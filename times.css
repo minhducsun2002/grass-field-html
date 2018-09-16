@@ -1,0 +1,19 @@
+.daytime {
+    background-image: linear-gradient(to bottom, #16e5de, #4bf0c2, #86f89e, #c1fb79, #fff85b);
+    z-index: -999;
+}
+
+.afternoon {
+    background-image: linear-gradient(to bottom, #0f002c, #4d0a36, #7d242a, #905512, #818b1a);
+    z-index: -999;
+}
+
+.dawn {
+    background-image: linear-gradient(to top, #ff6f2f, #dc7516, #b97602, #997501, #7c700e);
+    z-index: -999;
+}
+
+.night {
+    background-image: linear-gradient(to bottom, #15005e, #100352, #0d0447, #0d033b, #0e0030);
+    z-index: -999;
+}
