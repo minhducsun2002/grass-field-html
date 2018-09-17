@@ -7,3 +7,15 @@ html {
     top: 0; left: 0;
     position: absolute;
 }
+
+#sun-moon-layer {
+    z-index: 2;
+}
+
+#sun-moon {
+    position: absolute;
+    top: 18%;
+    right: 16%;
+    height: 13%;
+    width: 13%;
+}
