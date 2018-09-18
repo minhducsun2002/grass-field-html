@@ -1,5 +1,9 @@
 var globalTime = new Date();
 var times = new RegExp("daytime|afternoon|dawn|night");
+const moonDarkPath = 'assets/images/svg/030-moon-1.svg';
+const moonLightPath = 'assets/images/svg/030-moon-2.svg';
+const sunPath = 'assets/images/svg/011-sun-1.svg';
+var moon = false;
 
 setInterval (updateTime(), 1000 * 60 * 15);
 
@@ -36,11 +40,19 @@ function setBackground() {
 }
 
 function sunOrMoon() {
-    if (minute() <= 17 * 60) { // 17h
-        
+    if (minute() <= 6 * 60 || minute() >= 1000) { // 18h
+        // change to moon
+        if (!moon) {
+            document.querySelector('#sun-moon').setAttribute('src', moonLightPath);
+            moon = true; return;
+        }
+    }
+    if (moon) {
+        document.querySelector('#sun-moon').setAttribute('src', sunPath);
+        moon = false;
     }
 }
 
 function setGrassColor() {
-
+    
 }
