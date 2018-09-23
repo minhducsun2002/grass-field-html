@@ -14,7 +14,20 @@ html {
 
 #sun-moon {
     position: absolute;
-    top: 18%;
+    top: 10%;
     right: 16%;
     height: 13%;
+}
+
+.grass {
+    z-index: 3;
+}
+
+.stars {
+    z-index: 1;
+    height: 50%;
+}
+
+.star {
+    width : 1%;
 }
