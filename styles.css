@@ -21,6 +21,11 @@ html {
 
 .grass {
     z-index: 3;
+    width: 100%; height: 50%;
+    top: 50%; left: 0;
+    position: absolute;
+    background: url('./assets/images/svg/grass.svg') repeat repeat;
+    background-size: contain;
 }
 
 .stars {

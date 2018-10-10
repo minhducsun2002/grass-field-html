@@ -2,7 +2,7 @@ var globalTime = new Date();
 var times = new RegExp("daytime|afternoon|dawn|night");
 const moonDarkPath = 'assets/images/svg/030-moon-1.svg';
 const moonLightPath = 'assets/images/svg/030-moon-2.svg';
-const sunPath = 'assets/images/svg/011-sun-1.svg';
+const sunPath = 'assets/images/svg/012-sun.svg';
 var top_distance = ['65%', '20%', '35%', '50%', '10%'];
     // distance to top, used in setPlanetHeight()
 var moon = false;

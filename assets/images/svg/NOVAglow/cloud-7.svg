@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="2000px"
+   height="1600px"
+   viewBox="0 0 2000 1600"
+   version="1.1"
+   id="SVGRoot"
+   inkscape:version="0.92.2 2405546, 2018-03-11"
+   sodipodi:docname="cloud-7.svg">
+  <title
+     id="title8">Simple Cloud 03</title>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="795.98783"
+     inkscape:cy="790.83065"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="704"
+     inkscape:window-x="0"
+     inkscape:window-y="30"
+     inkscape:window-maximized="1" />
+  <defs
+     id="defs927" />
+  <metadata
+     id="metadata930">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Simple Cloud 03</dc:title>
+        <cc:license
+           rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/" />
+        <dc:description>Simple cloud labeled 3, for Vo Minh Duc (github.com/minhducsun2002)'s project.</dc:description>
+        <dc:date>23 September 2018</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Nguyen Hoang Duong</dc:title>
+          </cc:Agent>
+        </dc:creator>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/publicdomain/zero/1.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <path
+       style="opacity:1;vector-effect:none;fill:#64a6e6;fill-opacity:1;stroke:none;stroke-width:8.28193855;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 1456.0859 297.14258 A 366.77158 295.78351 0 0 0 1091.6875 560.50781 A 366.77158 295.78351 0 0 0 769.86719 405.99219 A 366.77158 295.78351 0 0 0 403.0957 701.77539 A 366.77158 295.78351 0 0 0 420.52148 790.75 A 366.77158 295.78351 0 0 0 152.27148 1075.6445 A 366.77158 295.78351 0 0 0 519.04297 1371.4277 A 366.77158 295.78351 0 0 0 850.88867 1200.8027 A 366.77158 295.78351 0 0 0 1124.8086 1300.4414 A 366.77158 295.78351 0 0 0 1434.6191 1162.3262 A 255.55696 253.1907 0 0 0 1543.6367 1186.8594 A 255.55696 253.1907 0 0 0 1799.1953 933.66992 A 255.55696 253.1907 0 0 0 1743.6113 776.04492 A 366.77158 295.78351 0 0 0 1822.8574 592.92578 A 366.77158 295.78351 0 0 0 1456.0859 297.14258 z "
+       id="rect945" />
+  </g>
+</svg>
