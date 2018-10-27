@@ -2,7 +2,13 @@ var globalTime = new Date();
 var times = new RegExp("daytime|afternoon|dawn|night");
 const moonDarkPath = 'assets/images/svg/030-moon-1.svg';
 const moonLightPath = 'assets/images/svg/030-moon-2.svg';
+const grassDarkPath = "./assets/images/svg/NOVAglow/grass-night.svg"
+const grassLightPath = "./assets/images/svg/NOVAglow/grass-day.svg"
 const sunPath = 'assets/images/svg/012-sun.svg';
+
+var time = [270, 360, 540, 660, 720, 840, 920, 955, 990, 1035, 1185, 1310, 1340, 1430, 40, 95, 170, 210]
+var levels = [0, 1, 2, 3, 4, 3, 2, 1, 0, 0, 1, 2, 3, 4, 3, 2, 1, 0]
+
 var top_distance = ['65%', '20%', '35%', '50%', '10%'];
     // distance to top, used in setPlanetHeight()
 var moon = false;
@@ -10,17 +16,18 @@ var moon = false;
 function in_range (arg, first, last){
     if (first <= last)
         return (first <= arg && arg < last);
-    else 
+    else
         return (first <= arg || arg < last);
 }
 
+updateTime();
 setInterval (updateTime(), 1000 * 60 * 15);
 
 function updateTime() {
     globalTime = new Date();
     setBackground();
-    sunOrMoon();
-    setGrassColor();
+    sunOrMoon(360, 1000);
+    setGrassColor(60 * 6, 60 * 17 + 30);
     setHeight();
 }
 
@@ -50,8 +57,8 @@ function setBackground() {
     }
 }
 
-function sunOrMoon() {
-    if (minute() <= 6 * 60 || minute() >= 1000) { // 18h
+function sunOrMoon(day, night) {
+    if (minute() <= day || minute() >= night) {
         // change to moon
         if (!moon) {
             document.querySelector('#sun-moon').setAttribute('src', moonLightPath);
@@ -69,47 +76,23 @@ function setPlanetHeight(arg) {
 }
 
 function setHeight() {
-    // levels :  top = 10% - 20% - 35% - 50% - 65%
-    //  day : 
-    //      - 04.30 = 0270 : sun at 0
-    //      - 06.00 = 0360 : sun at 1
-    //      - 09.00 = 0540 : sun at 2
-    //      - 11.00 = 0660 : sun at 3
-    //      - 12.00 = 0720 : sun at 4
-    //      - 14.00 = 0840 : sun at 3
-    //      - 15.20 = 0920 : sun at 2
-    //      - 15.55 = 0955 : sun at 1
-    //      - 16.30 = 0990 : sun at 0
-    if (in_range(minute(), 270, 360) || in_range(minute(), 990, 1035))
-        setPlanetHeight(top_distance[0]);
-    if (in_range(minute(), 360, 540) || in_range(minute(), 1035, 1185))
-        setPlanetHeight(top_distance[1]);
-    if (in_range(minute(), 540, 660) || in_range(minute(), 1185, 1310))
-        setPlanetHeight(top_distance[2]);
-    if (in_range(minute(), 660, 720) || in_range(minute(), 1310, 1340))
-        setPlanetHeight(top_distance[3]);
-    if (in_range(minute(), 720, 840) || in_range(minute(), 1340, 1430))
-        setPlanetHeight(top_distance[4]);
-    if (in_range(minute(), 840, 920) || in_range(minute(), 1430, 40))
-        setPlanetHeight(top_distance[3]);
-    if (in_range(minute(), 920, 955) || in_range(minute(), 40, 95))
-        setPlanetHeight(top_distance[2]);
-    if (in_range(minute(), 955, 990) || in_range(minute(), 95, 170))
-        setPlanetHeight(top_distance[1]);
-    if (in_range(minute(), 170, 270))
-        setPlanetHeight(top_distance[0]);
-    //  night : 
-    //      - 17.15 = 1035 : moon at 0
-    //      - 19.45 = 1185 : moon at 1
-    //      - 21.50 = 1310 : moon at 2
-    //      - 22.20 = 1340 : moon at 3
-    //      - 23.50 = 1430 : moon at 4
-    //      - 00.40 = 0040 : moon at 3
-    //      - 01.35 = 0095 : moon at 2
-    //      - 02.50 = 0170 : moon at 1
-    //      - 03.30 = 0210 : moon at 0
+    let current = minute();
+
 }
 
-function setGrassColor() {
-    
+function setGrassColor(day, night) {
+    if (minute() <= day || minute() >= night) {
+        // change to night
+        document.querySelector('.grass').style.backgroundImage = "url(\'" + grassDarkPath + "\')";
+        return;
+    }
+        document.querySelector('.grass').style.backgroundImage = "url(\'" + grassLightPath + "\')";
+}
+
+function find_prev_bound_rounded(arg, array) {
+    for (let index = 0 ; index < array.length - 1; index++) {
+        if (array[index] >= arg && array[index + 1] < arg) return index;
+    };
+    if (array[index.length - 1] <= arg && arg < array[0]) return array.length - 1;
+    else return undefined;
 }
