@@ -60,12 +60,10 @@ function setBackground() {
 function sunOrMoon(day, night) {
     if (minute() <= day || minute() >= night) {
         // change to moon
-        if (!moon) {
-            document.querySelector('#sun-moon').setAttribute('src', moonLightPath);
-            moon = true; return;
-        }
+        document.querySelector('#sun-moon').setAttribute('src', moonLightPath);
+        moon = true; return;
     }
-    if (moon) {
+    else {
         document.querySelector('#sun-moon').setAttribute('src', sunPath);
         moon = false;
     }
