@@ -26,7 +26,7 @@ setInterval (updateTime(), 1000 * 60 * 15);
 function updateTime() {
     globalTime = new Date();
     setBackground();
-    sunOrMoon(360, 1000);
+    dayNight(360, 1000);
     setGrassColor(60 * 6, 60 * 17 + 30);
     setHeight();
 }
@@ -57,14 +57,22 @@ function setBackground() {
     }
 }
 
-function sunOrMoon(day, night) {
+function dayNight(day, night) {
     if (minute() <= day || minute() >= night) {
         // change to moon
         document.querySelector('#sun-moon').setAttribute('src', moonLightPath);
+
+        document.querySelector('.stars').style.display = 'block';
+        document.querySelector('.clouds').style.display = 'none';
+
         moon = true; return;
     }
     else {
         document.querySelector('#sun-moon').setAttribute('src', sunPath);
+
+        document.querySelector('.stars').style.display = 'none';
+        document.querySelector('.clouds').style.display = 'block';
+
         moon = false;
     }
 }
