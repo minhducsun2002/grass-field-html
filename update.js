@@ -27,7 +27,7 @@ function updateTime() {
     globalTime = new Date();
     setBackground();
     dayNight(360, 1000);
-    setGrassColor(60 * 6, 60 * 17 + 30);
+    setGrassColor(60 * 6, 1000);
     setHeight();
 }
 
